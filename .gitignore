@@ -14,3 +14,9 @@ scaffold.md
 .env
 .env.*
 *.env
+
+# Local logs and scratchpads
+*.log
+results/*.log
+next_phase.txt
+
