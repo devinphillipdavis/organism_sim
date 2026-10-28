@@ -7,7 +7,7 @@ name = "organism-sim"
 version = "0.4.0"
 description = "Artificial-life simulation of autonomous state-machine agents: local state vectors, noise-driven repair, entropy-triggered mutation, message-passing populations, hash-chained telemetry."
 readme = "README.md"
-requires-python = ">=3.9"
+requires-python = ">=3.10"
 license = {text = "Apache-2.0"}
 authors = [{name = "Devin Phillip Davis", email = "osiris.dnalang@gmail.com"}]
 dependencies = ["numpy>=1.24.0", "dnalang>=0.2.0"]
@@ -22,7 +22,7 @@ organism-sim = "organism_sim.cli:main"
 include = ["organism_sim*"]
 
 [tool.ruff]
-target-version = "py39"
+target-version = "py310"
 line-length = 100
 
 [tool.ruff.lint]
