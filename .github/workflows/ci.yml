@@ -8,8 +8,14 @@ jobs:
     runs-on: ubuntu-latest
     strategy:
       matrix: { python-version: ["3.10", "3.12"] }
+    defaults:
+      run: { working-directory: organism_sim }
     steps:
       - uses: actions/checkout@v4
+        with: { path: organism_sim }
+      # the scorecard reads bridge's result files from a sibling checkout
+      - uses: actions/checkout@v4
+        with: { repository: devinphillipdavis/bridge, path: bridge }
       - uses: actions/setup-python@v5
         with: { python-version: "${{ matrix.python-version }}" }
       - run: pip install "dnalang @ git+https://github.com/devinphillipdavis/dnalang-core" -e ".[dev]" jsonschema
